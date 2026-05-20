@@ -29,7 +29,7 @@ for columna in range(3):
 
     promedio = suma / 3
 
-    print("Funcion", columna + 1, "=", promedio, "milisegundos")
+    print("Servidor", columna + 1, "=", promedio, "milisegundos")
 
 print()
 print("MATRIZ TRANSPUESTA")
