@@ -1,10 +1,12 @@
 import math #Libreria para angulo de funcion lineal
-import matplotlib.pyplot as plt #Crea una lista de numeros para el ee x
+import matplotlib.pyplot as plt #Crea una lista de numeros para el eje x
 import numpy as np # agarra la lista de numeros, dibuja los puntos en pantalla y los une con una linea para formar el grafico
 
 try:
+    #PRIMER MENU
     funcion= int(input("¡Bienvenido al sistema de informacion de funciones lineales!\n Elija a continuacion sobre que tipo de funcion desea trabajar:\n1- Funcion lineal\n2- Funcion cuadratica\nOpcion seleccionada: "))
 
+    #FUNCION LINEAL
     if funcion == 1:
         m= float(input('--------------------------------------------------------\nDada la ecuacion de funcion lineal "y= mx + b" a continuacion, ingrese los valores correspondientes a cada dato solicitado\nIngrese el valor de m: '))
         bLineal= float(input('Ingrese el valor de "b": '))
@@ -41,6 +43,7 @@ try:
         print("- Dominio: -infinito, +infinito")
         print(f"- Rango: {rango}")
 
+        #SEGUNDO MENU
         opcion = 0
         while opcion != 3:
             print("--------------------------------------------------------")
@@ -65,6 +68,7 @@ try:
             else:
                 print("Ingrese solo un numero correspondiente a una opcion.")
 
+    #FUNCION CUADRATICA
     elif funcion == 2:
         print('----------------------------------------\nDada la ecuacion de funcion cuadratica "y= ax² + bx + c" a continuacion, ingrese los valores correspondientes a cada dato solicitado.')
         a= float(input("Ingrese el valor de a: "))
@@ -105,12 +109,13 @@ try:
             print("- Dominio: -infinito, +infinito") #Para todas las funciones cuadraticas, el dominio es el mismo
             print(f"- Rango: {rango}")
 
+            #SEGUNDO MENU
             opcion = 0
             while opcion != 3:
                 print("--------------------------------------------------------")
                 opcion= int(input("Elija como desea continuar\n1- Generar grafico de la funcion\n2- Obtener el valor de Y de esa funcion ingresando un valor de X\n3- Salir del programa\nOpcion seleccionada:"))
 
-                if opcion == 1:
+                if opcion == 1: 
                     print("Generando grafico...")
                     x = np.linspace(-10, 10, 100)
                     y = a * (x**2) + bCuadratica * x + c
